@@ -1,0 +1,60 @@
+
+
+footer{
+
+  width:auto;
+  height: 464px;
+  display:flex;
+  background-color: #0a4b78;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Helvetica, sans-serif;
+  color:white;
+
+  .main-footer{
+    width: 1119px;
+    height: 219px;
+    background-color: #0e1112;
+    display:flex;
+
+    .colm-1{
+      margin-right: 7rem;
+
+      .footer-text{
+        width: 384px;
+        height: 48px;
+
+
+        p{
+          color: #CFCFCF;
+
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 24px;
+          letter-spacing: 0em;
+          text-align: left;
+
+
+        }
+      }
+    }
+
+    .colm-2{
+      margin-right: 15rem;
+
+    }
+
+    .colm-3{
+
+
+    }
+
+
+
+  }
+
+
+
+
+}

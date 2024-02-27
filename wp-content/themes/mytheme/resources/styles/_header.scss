@@ -1,29 +1,29 @@
-header{
-  display:flex;
+header {
+  display: flex;
   flex-direction: row;
   width: 1440px;
   height: 100px;
   background-color: pink;
 
 
-  .primary_menu{
-    display:flex;
+  .primary_menu {
+    display: flex;
     flex-direction: row;
     justify-content: right;
     width: 65%;
 
 
-    .menu{
-      display:flex;
+    .menu {
+      display: flex;
       flex-direction: row;
       width: 400px;
       justify-content: space-around;
       list-style: none;
 
 
-      a{
+      a {
         text-decoration: none;
-        font-family: Poppins;
+        font-family: Poppins, sans-serif;
         font-size: 16px;
         font-weight: 500;
         line-height: 24px;
@@ -32,89 +32,28 @@ header{
         color: #000000;
       }
     }
-  }
 
 
-
-
-  .secondary_menu{
-    display:flex;
-    flex-direction: row;
-    justify-content: right;
-    width: 35%;
-
-
-    .menu{
-      display:flex;
+    .secondary_menu {
+      display: flex;
       flex-direction: row;
-      width: 400px;
-      justify-content: space-around;
-      list-style: none;
+      justify-content: center;
+      width: 20%;
 
 
-      #menu-item-23{
-        a{
-          background-image: url('/resources/images/user.svg');
-          background-position: center center;
-          background-size: contain;
-          position:absolute;
-          margin:auto;
-          background-repeat: no-repeat;
-          text-decoration: none;
-          width: 20px;
-          height: 25px;
-          color: transparent;
-        }
+      .menu {
+        display: flex;
+        flex-direction: row;
+        width: 400px;
+        justify-content: space-around;
+        list-style: none;
 
 
-      }
-      #menu-item-25{
-        a{
-          background-image: url('/resources/images/search.svg');
-          background-position: center center;
-          background-size: contain;
-          position:absolute;
-          margin:auto;
-          background-repeat: no-repeat;
-          text-decoration: none;
-          width: 20px;
-          height: 20px;
-          color: transparent;
-        }
-
-      }
-      #menu-item-24{
-        a{
-          background-image: url('/resources/images/heart.svg');
-          background-position: center center;
-          background-size: contain;
-          position:absolute;
-          margin:auto;
-          background-repeat: no-repeat;
-          text-decoration: none;
-          width: 20px;
-          height: 20px;
-          color: transparent;
-        }
-      }
-      #menu-item-26 {
-
-        a {
-          background-image: url('/resources/images/shopping-cart.svg');
-          background-position: center center;
-          background-size: contain;
-          position:absolute;
-          margin:auto;
-          background-repeat: no-repeat;
-          text-decoration: none;
-          width: 20px;
-          height: 20px;
-          color: transparent;
-        }
       }
     }
   }
 }
+
 
 .hero {
   position:relative;

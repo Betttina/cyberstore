@@ -6,6 +6,8 @@ Template Name: Alla produkter
 
 get_header();
 
+echo '<div class="product-list">';
+
 // Hämta alla produkter
 $args     = array(
 	'post_type'      => 'product',
@@ -21,5 +23,7 @@ if ( $products->have_posts() ) :
 else :
 	echo __( 'Inga produkter hittades', 'textdomain' );
 endif;
+
+echo '</div>';
 
 get_footer();
