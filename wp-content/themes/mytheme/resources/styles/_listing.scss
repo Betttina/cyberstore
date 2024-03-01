@@ -40,6 +40,21 @@ main{
          align-items: center;
          justify-content: center;
 
+         .add_to_cart_button{
+           width: 183px;
+           height: 48px;
+           /*padding: 12px 64px 12px 64px;*/
+           border-radius: 8px;
+           gap: 8px;
+           background-color:black;
+           color:white;
+           display:flex;
+           align-items: center;
+           justify-content: center;
+           cursor: pointer;
+           
+         }
+
          a {
            position: relative;
            display: block;

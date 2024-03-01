@@ -16,9 +16,9 @@ function mytheme_init(){
 	$menu = array(
 		'primary_menu' => 'primary_menu',
 		'secondary_menu' => 'secondary_menu',
-		'footer_links' => 'footer_links',
-		'footer_help' => 'footer_help',
-		'footer_newsletter' => 'footer_newsletter'
+		'footer_service' => 'footer_service',
+		'footer_buyer' => 'footer_buyer',
+		'footer_social' => 'footer_social'
 	);
 	register_nav_menus($menu);
 }
