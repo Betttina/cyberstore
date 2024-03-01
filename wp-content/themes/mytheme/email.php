@@ -60,4 +60,19 @@ function custom_email_order_details_styling( $order, $sent_to_admin, $plain_text
 add_action( 'woocommerce_email_order_details', 'custom_email_order_details_styling', 10, 4 );
 
 
+add_filter( 'woocommerce_email_styles', 'custom_woocommerce_email_styles' );
+
+function custom_woocommerce_email_styles( $css ) {
+	$custom_css = "
+        /* Add your custom CSS styles here */
+        .woocommerce_email {
+            background-color: red;
+        }
+        .woocommerce_email p {
+            color: blue;
+        }
+    ";
+
+	return $css . $custom_css;
+}
 
