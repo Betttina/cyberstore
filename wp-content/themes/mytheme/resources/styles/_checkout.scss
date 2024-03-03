@@ -1,4 +1,9 @@
-// Adjust styles for the WooCommerce checkout form
+// styles for the WooCommerce checkout form
+
+
+.woocommerce{
+  margin:1rem;
+}
 
 // Set background color and border radius for main form container
 form.checkout {
@@ -91,7 +96,7 @@ form.checkout {
   }
 }
 
-// Adjust styles for the shipping options
+// shipping options
 
 .woocommerce-checkout-review-order-table{
   .woocommerce-shipping-options {
@@ -137,18 +142,63 @@ form.checkout {
 }
 
 
-#order_review{
+#order_review {
   margin: 0 1rem 0 1rem;
 
   .woocommerce-checkout-review-order-table{
     border-style:none;
 
+
+
+
+    tbody {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .cart_item{
+        padding:1rem;
+        border:none;
+      }
+
+
+
+      .product-total{
+        display:flex;
+        border:none;
+
+      }
+
+      .woocommerce table.shop_table td{
+        border:none;
+      }
+
+      tr{
+
+       .product-thumbnail{
+         display:flex;
+
+         padding:1rem;
+         margin:1rem;
+         .product-info{
+           width:10rem;
+           border:none;
+         }
+
+
+        }
+      }
+    }
+
+
+
     tbody,
     tr.shipping{
-      background-color: #0c88b4;
+      background-color: #ffffff;
+
 
       ul{
-        padding:5rem;
+
 
         li {
           background-color: #F6F6F6;
@@ -157,30 +207,42 @@ form.checkout {
 
           label{
             cursor: pointer;
+            flex-wrap:nowrap;
+            width:auto;
+            display:flex;
+            flex-direction: row;
+            white-space: nowrap;
+
+            span {
+              bdi{
+                margin-left:3rem;
+              }
+            }
           }
 
 
 
-          /* Hide the default radio button */
+          /* hide the default radio button */
           input[type="radio"] {
             appearance: none;
             -webkit-appearance: none;
             -moz-appearance: none;
-            width: 16px; /* Adjust size as needed */
-            height: 16px; /* Adjust size as needed */
-            border: 2px solid black; /* Black border */
-            border-radius: 50%; /* Make it a circle */
-            outline: none; /* Remove outline */
+            width: 16px;
+            height: 16px;
+            border: 2px solid black;
+            border-radius: 50%; /* make borders circular */
+            outline: none; /* remove outline */
           }
 
-          /* Style the inner dot */
+          /* inner dot */
           input[type="radio"]:checked::before {
             content: '';
             display: block;
-            width: 8px; /* Adjust size as needed */
-            height: 8px; /* Adjust size as needed */
-            background-color: black; /* Black dot */
-            border-radius: 50%; /* Make it a circle */
+            width: 8px;
+            height: 8px;
+            background-color: black; /* black dot */
+            border-radius: 50%; /* make it a circle */
+            margin:2.4px; /* center it */
           }
 
         }
