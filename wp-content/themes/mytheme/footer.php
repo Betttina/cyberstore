@@ -11,7 +11,7 @@
 
 
     <div class="grey-center">
-        <h1>Big Summer</h1><h1>Sale</h1>
+        <h1>Big Summer <b>Sale</b></h1>
         <h6>Commodo fames vitae vitae leo mauris in. Eu consequat.</h6>
         <button><h3>Show Now</h3></button>
     </div>

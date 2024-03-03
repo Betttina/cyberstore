@@ -1,18 +1,15 @@
 @import "./variables";
 
-.grey-banner{
+
+
+
+.grey-banner {
   height:448px;
   width:auto;
   background: rgb(46,46,46);
   background: linear-gradient(90deg, rgba(46,46,46,1) 30%, rgba(0,0,0,1) 100%);
-}
-
-
-.grey-banner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: #f6f6f6;
   overflow: hidden;
 
   .grey-left,
@@ -29,22 +26,31 @@
   }
 
   h1 {
-    font-size: 36px; // Adjust as needed
-    margin-bottom: 10px; // Adjust as needed
-    color: #333; // Adjust color
+    font-size: 72px;
+    margin:0;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: $white;
+    font-weight: lighter;
+
   }
 
   h6 {
-    font-size: 16px; // Adjust as needed
-    color: #666; // Adjust color
-    margin-bottom: 20px; // Adjust as needed
+    margin:0;
+    color: $quaternary-font-color;
+    padding-bottom:2rem;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: center;
+
   }
 
   button {
-    background-color: transparent; // Button background color
+    background-color: transparent;
     border: 1px solid white;
-    color: white; // Button text color
-    //padding: 16px 56px 16px 56px;
+    color: white; // button text color
     width:184px;
     height:53px;
     border-radius: 6px;
@@ -53,10 +59,10 @@
     transition: background-color 0.3s ease;
     align-items: center;
     justify-content: center;
-    line-height: 24px;
+    line-height: 0;
 
     &:hover {
-      background-color: #083a5c; // Button hover background color
+      background-color: #343434; // Button hover background color
     }
   }
 
@@ -64,7 +70,7 @@
     max-width: 100%; // Ensure images don't exceed container width
     height: auto; // Maintain aspect ratio
     transform: rotate(5deg); // Rotate images (adjust angle as needed)
-    margin-bottom: 20px; // Adjust as needed
+    margin-bottom: 20px;
   }
 
   .grey-left img:nth-child(3),
@@ -98,6 +104,17 @@
       height: 262.08px;
       transform: scaleX(-1);
       margin-top:-3rem;
+
+    }
+  }
+
+  .grey-right{
+    img:nth-child(1){
+      width: 120.36px;
+      height: 365.97px;
+      transform: rotate(31.47deg);
+      margin-right:-10rem;
+      padding-left:10rem;
 
     }
   }
