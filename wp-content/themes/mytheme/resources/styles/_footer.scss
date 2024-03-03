@@ -1,3 +1,4 @@
+@import "./variables";
 
 .grey-banner{
   height:448px;
@@ -6,14 +7,112 @@
   background: linear-gradient(90deg, rgba(46,46,46,1) 30%, rgba(0,0,0,1) 100%);
 }
 
+
+.grey-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+  overflow: hidden;
+
+  .grey-left,
+  .grey-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .grey-center {
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  h1 {
+    font-size: 36px; // Adjust as needed
+    margin-bottom: 10px; // Adjust as needed
+    color: #333; // Adjust color
+  }
+
+  h6 {
+    font-size: 16px; // Adjust as needed
+    color: #666; // Adjust color
+    margin-bottom: 20px; // Adjust as needed
+  }
+
+  button {
+    background-color: transparent; // Button background color
+    border: 1px solid white;
+    color: white; // Button text color
+    //padding: 16px 56px 16px 56px;
+    width:184px;
+    height:53px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    line-height: 24px;
+
+    &:hover {
+      background-color: #083a5c; // Button hover background color
+    }
+  }
+
+  img {
+    max-width: 100%; // Ensure images don't exceed container width
+    height: auto; // Maintain aspect ratio
+    transform: rotate(5deg); // Rotate images (adjust angle as needed)
+    margin-bottom: 20px; // Adjust as needed
+  }
+
+  .grey-left img:nth-child(3),
+  .grey-right img:nth-child(1) {
+    margin-bottom: 0; // Remove bottom margin for specific images
+  }
+
+
+
+  .grey-left img, .grey-right img {
+    max-width: 100%;
+  }
+
+  .grey-left {
+    img:nth-child(1) {
+      width: 337.92px;
+      height: 181.97px;
+      padding-left:8rem;
+      margin-bottom:-1em;
+    }
+    img:nth-child(2) {
+      width: 237px;
+      height: 192px;
+      padding-left:2rem;
+      z-index:1;
+      margin-top:-4rem;
+
+    }
+    img:nth-child(3) {
+      width: 418.56px;
+      height: 262.08px;
+      transform: scaleX(-1);
+      margin-top:-3rem;
+
+    }
+  }
+}
+
+
 footer{
 
   width:auto;
   height: 464px;
   display:flex;
-  background-color: #0a4b78;
+  background-color: $main-color;
   justify-content: center;
   align-items: center;
+  flex-direction: column; /* Stapla underordnade element vertikalt / Stack child elements vertically */
 
   font-family: Helvetica, sans-serif;
   color:white;
@@ -21,15 +120,26 @@ footer{
   .main-footer{
     width: 1119px;
     height: 219px;
-    background-color: #0e1112;
     display:flex;
+    justify-content:space-between;
+    margin-left:-6rem;
+
 
     .colm-1{
-      margin-right: 7rem;
+      //margin-right: 7rem;
+      width:30rem;
 
       .footer-text{
-        width: 384px;
+
         height: 48px;
+        color:$tertiary-font-color;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+
+
 
 
         p{
@@ -46,13 +156,36 @@ footer{
       }
     }
 
-    .colm-2{
-      margin-right: 15rem;
+    .colm-2, .colm-3{
+      //margin-right: 4rem;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      width: 200px; /* Adjust the width as needed */
 
-    }
 
-    .colm-3{
 
+
+      ul{
+        list-style:none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+
+        li a{
+          color: $tertiary-font-color;
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 32px;
+          letter-spacing: 0em;
+          text-align: left;
+          white-space: nowrap;
+
+        }
+
+      }
 
     }
 
@@ -60,6 +193,16 @@ footer{
 
   }
 
+  .social-media{
+    margin-top: 3rem;
+    align-self:flex-start;
+    margin-left:10rem;
+    a{
+      color:white;
+      padding-right:2rem;
+      font-size:20px;
+    }
+  }
 
 
 
