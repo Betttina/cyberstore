@@ -19,16 +19,16 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 
-// Get order billing first name
+// get order billing first name
 $billing_first_name = $order->get_billing_first_name();
 
-// Get order number
+// get order number
 $order_number = $order->get_order_number();
 
-// Get order date
+// get order date
 $order_date = $order->get_date_created()->format('F j, Y');
 
-// Get order items
+// get order items
 $order_items = $order->get_items();
 
 ?>
@@ -41,7 +41,7 @@ $order_items = $order->get_items();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Your Order Update</title>
     <style>
-        /* Styles for the email container */
+        /* email container */
         .email-container {
             font-family: Calibri, sans-serif;
             background-color: #f8f9fa;
@@ -49,7 +49,7 @@ $order_items = $order->get_items();
             color: #333;
         }
 
-        /* Styles for the main content area */
+        /* main content area */
         .content {
             background-color: #fff;
             padding: 20px;
@@ -58,26 +58,23 @@ $order_items = $order->get_items();
             margin-bottom: 20px;
         }
 
-        /* Heading styles */
         h1 {
             color: #333;
             font-size: 24px;
             margin-bottom: 20px;
         }
 
-        /* Text styles */
         p {
             font-size: 16px;
             line-height: 1.5;
             margin-bottom: 10px;
         }
 
-        /* Order details styles */
+
         .order-details {
             margin-top: 20px;
         }
 
-        /* Order number styles */
         .order-number {
             font-weight: bold;
         }
@@ -86,7 +83,6 @@ $order_items = $order->get_items();
             background-color:black;
         }
 
-        /* Footer styles */
         .footer {
             color: #999;
             font-size: 14px;
@@ -99,19 +95,6 @@ $order_items = $order->get_items();
             color: rgb(111,111,111);
         }
 
-
-        /* Order details styles */
-        .order-details {
-            margin-top: 20px;
-        }
-
-        /* Order number styles */
-        .order-number {
-            font-weight: bold;
-        }
-
-
-        /* Product image styles */
         .product-image {
             max-width: 100px;
             margin-right: 10px;
@@ -165,7 +148,6 @@ $order_items = $order->get_items();
             -webkit-transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
             transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
         }
-        /* //Facbook */
         .social-button.facebook:before {
             background-color: #3B5998;
         }
@@ -173,7 +155,6 @@ $order_items = $order->get_items();
             color: #3B5998;
         }
 
-        /* //Twitter */
         .social-button.twitter:before {
             background-color: #55acee;
         }
@@ -181,11 +162,11 @@ $order_items = $order->get_items();
             color: #55acee;
         }
 
-        /* //Google Plus */
-        .social-button.google:before {
+
+        .social-button.tiktok:before {
             background-color: #53ccff;
         }
-        .social-button.google .fa {
+        .social-button.tiktok .fa {
             color: #dd4b39;
         }
 
@@ -203,18 +184,16 @@ $order_items = $order->get_items();
 </head>
 <body>
 
-<!-- Email container -->
+<!-- email container -->
 <div class="email-container">
     <!-- Content -->
     <div class="content">
-        <!-- Greeting -->
         <h1>Hello, <?php echo esc_html($billing_first_name); ?></h1>
         <!-- Order details -->
         <div class="order-details">
             <p>We've received your order #<span class="order-number"><?php echo esc_html($order_number); ?></span> and it is now being processed.</p>
             <p>Order Date: <?php echo esc_html($order_date); ?></p>
-            <!-- Product details -->
-
+            <!-- product details -->
 	        <?php if (!empty($order_items)) : ?>
                 <h2>Ordered Items:</h2>
                 <ul>
@@ -226,11 +205,11 @@ $order_items = $order->get_items();
 				        $product_name = $product->get_name();
 				        ?>
                         <li>
-                            <!-- Display the product image -->
+                            <!-- product image -->
 					        <?php if ($product_image_url) : ?>
                                 <img src="<?php echo esc_url($product_image_url); ?>" alt="<?php echo esc_attr($product_name); ?>" class="product-image">
 					        <?php endif; ?>
-                            <!-- Display the product name -->
+                            <!-- product name -->
 					        <?php echo esc_html($product_name); ?>
                         </li>
 			        <?php endforeach; ?>
@@ -253,8 +232,6 @@ $order_items = $order->get_items();
 </div>
 
 
-
-
         <div>
             <h3 class="contact-font">Stay in touch<h3>
 
@@ -269,7 +246,7 @@ $order_items = $order->get_items();
                             </i>
                         </a>
 
-                        <a class="social-button google" href="#">
+                        <a class="social-button tiktok" href="#">
                             <i class="fa-brands fa-tiktok"></i>
                         </a>
                     </div>

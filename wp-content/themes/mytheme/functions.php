@@ -6,6 +6,11 @@ require_once("email.php");
 require_once("social_media.php");
 
 
+function mytheme_add_woocommerce_support() {
+	add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+
 /* Font Awesome icons */
 function enqueue_font_awesome() {
 	wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v6.5.1/css/all.css' );
@@ -31,3 +36,7 @@ function bbloomer_order_with_product_images( $args ) {
 	$args['show_image'] = true;
 	return $args;
 }
+
+
+
+
