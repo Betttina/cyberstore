@@ -5,11 +5,13 @@ require_once("init.php");
 require_once("email.php");
 require_once("social_media.php");
 
-
+/* WooCommerce support */
 function mytheme_add_woocommerce_support() {
 	add_theme_support( 'woocommerce' );
 }
 add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+
+
 
 /* Font Awesome icons */
 function enqueue_font_awesome() {
@@ -21,7 +23,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
 
 
 
-/* to get product images for email */
+/* get product images for email */
 /**
  * @snippet       Product Thumbnails @ WooCommerce Order Emails
  * @how-to        Get CustomizeWoo.com FREE
